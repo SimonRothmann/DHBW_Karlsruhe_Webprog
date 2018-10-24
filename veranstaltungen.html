@@ -2,68 +2,222 @@
 <meta charset="utf-8">
 
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/plug-ins/1.10.19/sorting/date-de.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="veranstaltungen.css">
+
+    <script>
+        $(document).ready(function() {
+            
+                $('#datepicker').datepicker({
+                    prevText: '&#x3c;zurück', prevStatus: '',
+                    prevJumpText: '&#x3c;&#x3c;', prevJumpStatus: '',
+                    nextText: 'Vor&#x3e;', nextStatus: '',
+                    nextJumpText: '&#x3e;&#x3e;', nextJumpStatus: '',
+                    currentText: 'heute', currentStatus: '',
+                    buttonImage: "Bilder/calendar.png",
+                    todayText: 'heute', todayStatus: '',
+                    clearText: '-', clearStatus: '',
+                    closeText: 'schließen', closeStatus: '',
+                    monthNames: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
+                        'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
+                    monthNamesShort: ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun',
+                        'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'],
+                    dayNames: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
+                    dayNamesShort: ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'],
+                    dayNamesMin: ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'],
+                    showMonthAfterYear: false,
+                    showOn: 'focus',
+                    showOtherMonths: true,
+                    dateFormat: 'dd.mm.yy'
+                }
+                );
+
+
+        });
+    </script>
 </head>
 
-<body style="background-color:white; padding: 70px;">
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="#"><img src="#" width="30" height="40"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="hauptseite.html" onclick="ga('send', 'event', 'Navbar',
-                            'Community links', 'Examples');">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="veranstaltungen.html" onclick="ga('send', 'event', 'Navbar',
-                            'Community links', 'Bootstrap');">Veranstaltungen</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="ueberuns.html" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">Über Uns</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown05">
-                            <a class="dropdown-item" href="ueberuns.html">Über Uns</a>
-                            <a class="dropdown-item" href="ueberuns.html">Kontakt</a>
-                        </div>
-                    </li>
-                    <!--li class="nav-item">
-                    <a class="nav-link" href="ueberuns.html" onclick="ga('send', 'event', 'Navbar',
-                            'Community links', 'Docs');">Über
-                        Uns</a>
-                </li>-->
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <header>
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+                    <a class="navbar-brand" href="#"><img src="Bilder/Logo.png" width="30" height="40"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="hauptseite.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="veranstaltungen.html">Veranstaltungen</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="ueberuns.html" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">Über Uns</a>
+                                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                                    <a class="dropdown-item" href="ueberuns.html">Über Uns</a>
+                                    <a class="dropdown-item" href="ueberuns.html#kontakt">Kontakt</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        </div>
+        <div class="middle">
+            <h1>
+                Veranstaltungen
+            </h1>
+
+            <div class="table-responsive">
+                <table class="table" id="tabelle">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Datum</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Beschreibung</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabbody">
+
+                    </tbody>
+                </table>
             </div>
-        </nav>
-    </header>
-    <h1>
-        Veranstaltungen
-    </h1>
-    <div class="table-responsive">
-        <table class="table" id="tabelle">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Datum</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Beschreibung</th>
-                </tr>
-            </thead>
-        </table>
+            <br>
+            <form id="frm1" action="">
+                <label for="date">Datum: </label> <input type="text" name="date" id="datepicker"><br>
+                <label for="name">Name: </label> <input type="text" name="name"><br>
+                <label for="desc">Beschreibung: </label> <textarea name="desc"></textarea><br>
+            </form>
+            <br>
+            <button class="btn btn-primary" onclick="add()">Hinzufügen</button>
+            <button class="btn btn-primary" onclick="clearCache()">Hinzugefügte löschen</button>
+            <script>
+                //console.log(key);
+                //debugger;
+                window.onload = laden;
+                var ipsum100 = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
+                //füllt den Localstorage mit Beispielwerten
+                function fillStorage() {
+                    var veranstaltung1 = ["20.01.2019", "Beispielname 1", ipsum100];
+                    var veranstaltung2 = ["21.01.2019", "Beispielname 2", ipsum100];
+                    var veranstaltung3 = ["22.01.2019", "Beispielname 3", ipsum100];
+                    localStorage.setItem('test1', JSON.stringify(veranstaltung1));
+                    localStorage.setItem('test2', JSON.stringify(veranstaltung2));
+                    localStorage.setItem('test3', JSON.stringify(veranstaltung3));
+
+                }
+                //holt die ganzen Elemente des Localstorage und füllt die Liste
+                function allStorage() {
+                    var veranstaltungen = [],
+                        dates = Object.keys(localStorage),
+                        i = dates.length;
+                    l = 0;
+
+                    while (l < i) {
+                        tablemaker(JSON.parse(localStorage.getItem(dates[l])));
+                        veranstaltungen.push(localStorage.getItem(dates[l]));
+                        l++;
+                    }
+                }
+                const tab = document.getElementById('tabelle');
+                const bod = document.getElementById('tabbody');
+                function tablemaker(element) {
+                    const tr = document.createElement('tr');
+                    var tds = document.createElement('td');
+                    var btn = document.createElement("BUTTON");
+                    btn.innerHTML = "Event löschen";
+                    btn.addEventListener("click", function () {
+                        var datum = String($(this).closest('tr').find(':nth-child(2)').html());
+                        var name = String($(this).closest('tr').find(':nth-child(3)').html());
+                        var key = datum + name;
+                        var keys = Object.keys(localStorage)
+                        if (contains(keys, key)) {
+                            localStorage.removeItem(key);
+                        }
+                        
+                        $(this).closest('tr').remove();
+                        location.reload(true);
+                    });
+                    tds.appendChild(btn);
+                    tr.appendChild(tds);
+                    if (element) {
+                        for (i = 0; i < element.length; i++) {
+                            var td = document.createElement('td');
+                            // if(i=3){
+                            //     td.colSpan = 2;
+                            // }
+                            td.textContent = element[i];
+                            tr.appendChild(td);
+                        }
+                    }
+                    bod.appendChild(tr);
+
+
+                }
+                $(function () {
+                    $('#tabelle').DataTable({
+                        columnDefs: [
+                            { type: 'de_date', targets: 1 },
+                            { "targets": 0, "searchable": false, "orderable": false }
+                        ], order: [[1, 'asc']],
+                    });
+                });
+                //wird beim laden ausgeführt
+                function laden() {
+                    fillStorage();
+                    allStorage();
+                }
+                //leert den localstorage und lädt die seite neu
+                function clearCache() {
+                    localStorage.clear();
+                    location.reload();
+                }
+                function add() {
+                    var key = "";
+                    var x = document.getElementsByName("date")[0].value;
+                    var text = [];
+                    key = key + x;
+                    text.push(x);
+                    var x = document.getElementsByName("name")[0].value;
+                    key = key + x;
+                    text.push(x);
+                    var x = document.getElementsByName("desc")[0].value;
+
+                    text.push(x);
+
+                    localStorage.setItem(key, JSON.stringify(text));
+                    tablemaker(text);
+                    location.reload(true);
+                }
+                function contains(a, obj) {
+                    for (var i = 0; i < a.length; i++) {
+                        if (a[i] === obj) {
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+            </script>
+        </div>
     </div>
 </body>
+<footer>
+<div class="footer">
+    <p>© Viktoria Ibach, Simon Rothmann, Julia Becker</p>
+</div>
+</footer>
