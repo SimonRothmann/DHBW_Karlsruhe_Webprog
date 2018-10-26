@@ -1,0 +1,217 @@
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+  'header header header header header header' 
+  'middle middle middle middle middle middle' 
+  'footer footer footer footer footer footer';
+  grid-column-gap: 10px;
+} 
+
+.footer {
+  grid-area: footer;
+    background-color: #343a40;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+    margin-left: 0;
+    font-family: inherit;
+	color: grey;
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 15px;
+  
+}
+
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+    'header header header header header header' 
+    'middle middle middle middle middle middle' 
+    'footer footer footer footer footer footer';
+    }
+}
+
+.middle {
+	padding-top: 70px;
+	background-color: white;
+}
+
+#headline {
+	padding-bottom: 35px;
+}
+
+#verein {
+	padding-bottom: 20px;
+}
+
+#logo {
+	float: left;
+	width: 250px;
+	height: 300px;
+	margin-right: 50px;
+}
+
+#vorstand {
+	clear:left;
+	padding-top: 50px;
+	padding-bottom: 35px;
+}
+
+#vorstand1{
+	width:80px;
+	margin-left: 40%;
+	padding-top: 15px;
+}
+
+.spalte {
+    float: left;
+    width: 420px;
+    margin-bottom: 16px;
+    padding: 0 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .spalte {
+        width: 100%;
+        display: block; /* Anweisung für Browser Elemente als Block-Box darzustellen --> gesamte Breite des Elternelements */
+    }
+}
+
+.karte {
+    box-shadow: 0 4px 8px 0 rgb(63, 72, 204); /* Schattierung unten (4px) und an den Seiten (0), leicht verschwommen (8px) */
+}
+
+.inhalt {
+    padding: 0 16px;
+}
+
+.inhalt::after, .reihe::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.titel {
+    color: grey;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #3f48cc;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #7f8082;
+}
+
+#nachricht {
+	margin-top: 1em;
+	color: #3f48cc;
+}
+
+#kontakt {
+	clear:left;
+	padding-top: 50px;
+	padding-bottom: 35px;
+}
+
+.formular{
+	float: left;
+	margin-right: 2em;
+}
+
+.formular::after{
+	clear: left;
+}
+
+/* Layout Formular*/
+form {
+    max-width: 30em;
+
+    border: 1px solid #343a40;
+    background: #c1c5c9;
+    padding: 1em;
+}
+
+form > *,
+form > .nebeneinander > * {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+form > .nebeneinander {
+    display: flex;
+}
+
+form > .nebeneinander > * {
+    margin-right: 0.25em;
+}
+
+form > .nebeneinander > *:last-child {
+    margin-right: 0;
+}
+
+/* Labels */
+form label {
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+form label:first-child {
+    margin-top: 0;
+}
+
+form label .pflichtfeld {
+    color: #e2091e;
+}
+
+/* Ausfüllfelder */
+input,
+textarea,
+select {
+    border: 1px solid #343a40;
+    padding: 0.5em;
+    margin: 0;
+    outline: none;
+}
+
+textarea {
+    height: 15em;
+}
+
+/* Anfragen Button */
+.button2 {
+	border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+	margin-top: 12px;
+    color: white;
+    background-color: #3f48cc;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button2:hover {
+    background-color: #7f8082;
+}
+
+/* Anzeige der Prüfnachricht */
+#ergebnis {
+    margin-top: 1em;
+    color: #e2091e;
+	
+}
+
+#ergebnis.okay {
+    color: #3f48cc;
+}
