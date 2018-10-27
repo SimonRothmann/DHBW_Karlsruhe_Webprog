@@ -2,152 +2,114 @@
 <meta charset="utf-8">
 
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl"
-        crossorigin="anonymous"></script>
-	<link href="hauptseite.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl"
+	 crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="hauptseite.css">
 </head>
 
-<body style="background-color:white; padding: 70px;">
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="#"><img src="Bilder/Logo.png" width="30" height="40"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link " href="hauptseite.html" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="veranstaltungen.html" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Veranstaltungen</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="ueberuns.html" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Über
-                            Uns</a>
-                    </li>
-                </ul>
-                <!--This is a comment. Comments are not displayed in the browser
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form> -->
-            </div>
-        </nav>
-    </header>
-
-    <h1>Herzlich Willkommen beim VFS!
-		<img src="Bilder/Logo - Hintergrund weiß.png" alt="Logo" width="30" height="40" />
-		</h1>
-
-		<div>
-			<p class="text-justify">
-				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
-
-                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
-                
-                Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.   
-                
-                Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.   
-                
-               
-			</p>
+<body>
+	<div class="grid-container">
+		<div class="header">
+			<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+				<a class="navbar-brand" href="#"><img src="Bilder/Logo.png" width="30" height="40"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+				 aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link " href="hauptseite.html" >Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="veranstaltungen.html" >Veranstaltungen</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="ueberuns.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Über Uns</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown05">
+							  <a class="dropdown-item" href="ueberuns.html">Über Uns</a>
+							  <a class="dropdown-item" href="ueberuns.html">Kontakt</a>
+							</div>
+						</li>
+						<!--li class="nav-item">
+							<a class="nav-link" href="ueberuns.html" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Über
+								Uns</a>
+						</li>
+					</ul>
+					<!--This is a comment. Comments are not displayed in the browser
+					<form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					</form> -->
+				</div>
+			</nav>
 		</div>
 		
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-		<!--- Seitenangabe -->
-			<ol class="carousel-indicators">
-				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to="1"></li>
-				<li data-target="#myCarousel" data-slide-to="2"></li>
-				<li data-target="#myCarousel" data-slide-to="3"></li>
-				<li data-target="#myCarousel" data-slide-to="3"></li>
-				<li data-target="#myCarousel" data-slide-to="5"></li>
-				<li data-target="#myCarousel" data-slide-to="6"></li>
-				<li data-target="#myCarousel" data-slide-to="7"></li>
-				<li data-target="#myCarousel" data-slide-to="8"></li>
-				<li data-target="#myCarousel" data-slide-to="9"></li>
-				<li data-target="#myCarousel" data-slide-to="10"></li>
-				<li data-target="#myCarousel" data-slide-to="11"></li>
-			</ol>
+		
+		<div class="left">
+			<h1>Herzlich Willkommen beim VFS!
+				<img src="Bilder/Logo - Hintergrund weiß.png" alt="Logo" width="30" height="40" />
+			</h1>
 			
-		<!----Wrapper--->
-			<div class="carousel-inner">
-				<div class="item active">
-					<img src="Bilder/Besprechung.jfif" alt="Besprechung"  />
-				</div>
-				
-				<div class="item active">
-					<img src="Bilder/Vereinsleben.jfif" alt="Vereinsleben" />
-				</div>
-				
-				<div class="item active">
-					<img src="Bilder/Vereine Blau.png" alt="Vereine Blau" />
-				</div>
-				
-				<div class="item">
-					<img src="Bilder/Menschenmenge.jfif" alt="Menschenmenge" />
-				</div>
-				
-				<div class="item">
-					<img src="Bilder/Männer und Frauen.jfif" alt="Männer und Frauen" />
-				</div>
-				
-				<div class="item">
-					<img src="Bilder/Kinder.jfif" alt="Kinder" />
-				</div>
-				
-				<div class="item">
-					<img src="Bilder/Hände.jfif" alt="Hände" />
-				</div>
-				
-				<div class="item">
-					<img src="Bilder/Hände bunt.jfif" alt="Hände bunt" />
-				</div>
-				
-				<div class="item">
-					<img src="Bilder/Haus.jfif" alt="Haus" />
-				</div>
-				
-				<div class="item">
-					<img src="Bilder/Gemeinsam.png" alt="Gemeinsam" />
-				</div>
-				
-				<div class="item">
-					<<img src="Bilder/Gemeinsam mehr erreichen.jfif" alt="Gemeinsam mehr erreichen" />
-				</div>
-				
-				<div class="item">
-					<img src="Bilder/Facebook.png" alt="Facebook" />
-				</div>
-			</div>	
-			
-		<!---- Rechts und links Pfeile--->
-			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-				<span class="sr-only">Next</span>
-			</a>
-		</div>
+				<div>
+					<p class="text-justify">
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+						magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+						gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+						elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+						eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+						dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+						labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+						Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-	<footer class="navbar navbar-expand-md navbar-dark bg-dark bottom">
-			<!---<a href="#kontakt.html">Kontakt</a>-->
-			<div class="container-fluid text-center text-md-left">
-				<div class="row">
-					<div class="col-md-6 mt md-0 mt-3">
-					
-		<h5 class="text-uppercase">Dies ist das Ende dieser Seite</h5>
-			<p>Das ist eine tolle Seite</p>
-					</div>
+						Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+						nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue
+						duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+						nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+
+						Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+						consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+						eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
+						delenit augue duis dolore te feugait nulla facilisi.
+
+						Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim
+						assum.
+					</p>
 				</div>
+			<h2>Unsere Bildergalerie</h2>
+				<section class = "galerie">
+					<figure> <img src="Bilder/Besprechung.jfif" alt="Besprechung" /></figure>
+					<figure> <img src="Bilder/Vereinsleben.jfif" alt="Vereinsleben" /></figure>
+					<figure> <img src="Bilder/Vereine Blau.png" alt="Vereine Blau" /></figure>
+					<figure> <img src="Bilder/Menschenmenge.jfif" alt="Menschenmenge" /></figure>
+					<figure> <img src="Bilder/Männer und Frauen.jfif" alt="Männer und Frauen" /></figure>
+					<figure> <img src="Bilder/Kinder.jfif" alt="Kinder" /></figure>
+					<figure> <img src="Bilder/Hände.jfif" alt="Hände" /></figure>
+					<figure> <img src="Bilder/Hände bunt.jfif" alt="Hände bunt" /></figure>
+					<figure> <img src="Bilder/Haus.jfif" alt="Haus" /></figure>
+					<figure> <img src="Bilder/Gemeinsam.png" alt="Gemeinsam.png" /></figure>
+					<figure> <img src="Bilder/Gemeinsam mehr erreichen.jfif" alt="Gemeinsam mehr erreichen" /></figure>
+					<figure> <img src="Bilder/Facebook.png" alt="Facebook" /></figure>
+				
+						
+				</section>
 			</div>
-					
-		<div class="footer-copyright text-center py-3">© 2017 Copyright: Simon Rothmann, Viktoria Ibach, Julia Becker</p>
-		</div>
-	</footer>
-	
-</body>
+			
+			<div class="right" style="background-color:#ccc;">
+				<p> Anstehende Veranstaltungen </p>
+			</div>
+	  
+	  
+	</div>
+
+	</body>
+	<div class="footer">
+		<p>Viktoria Ibach, Simon Rothmann, Julia Becker</p>
+	</div>
+
