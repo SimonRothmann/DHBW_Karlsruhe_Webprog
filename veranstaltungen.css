@@ -245,7 +245,7 @@ button {
 }
 
 button:hover {
-    background-color: white; /* Green */
+    background-color: white; 
     color: #343a40;
 }
 .table .thead-dark th{
